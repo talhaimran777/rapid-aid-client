@@ -8,7 +8,7 @@ import { SET_CURRENT_USER, SET_IO } from './redux/actions/action.types/actionTyp
 
 const App = () => {
   const dispatch = useDispatch()
-  const socket = io.connect(process.env.REACT_APP_SERVER_URL)
+  const socket = io.connect("wss://creepy-toad-gaiters.cyclic.app")
 
   if (useJwt.getToken()) {
     const token = useJwt.getToken()
