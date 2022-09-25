@@ -8,7 +8,7 @@ import io from "socket.io-client";
 import { SET_CURRENT_USER, SET_IO } from './redux/actions/action.types/actionTypes'
 
 const App = () => {
-  const socket = io.connect(process.env.REACT_APP_SOCKET_URL);
+  const socket = io.connect(process.env.REACT_APP_SERVER_URL);
   const dispatch = useDispatch()
 
   if (useJwt.getToken()) {
